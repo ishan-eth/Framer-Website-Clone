@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Framer Site</title>
+    <style>
+        .navbar {
+            background-color: white;
+            display: flex;
+            gap: 1290px;
+            align-content: center;
+            border-bottom: 1px solid rgb(212, 212, 212);
+            padding-top: 0px;
+            height: 50px;
+
+        }
+        .logo {
+            padding-left: 10px;
+            display: flex;
+        }
+        .info {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+            padding-bottom: 7px;
+        }
+        .info>a {
+            text-decoration: none;
+            color: rgb(68 68 68);
+            font-size: 15px;
+            font-family: "Inter-Medium", "Inter", sans-serif;
+            letter-spacing: -0.01em;
+            font-weight: 500;
+        }
+        .logoimg {
+            align-content: center;
+            padding-right: 18px;
+        }
+        .hire {
+            background-color: white;
+            height: 400px;
+            width: 390px;
+            margin-left: 270px;
+            margin-top: 150px;
+        }
+        .hire>h1 {
+            font-family: "Inter", "Inter Placeholder", sans-serif;
+            font-size: 50px;
+            font-weight: 700px;
+            letter-spacing: -2px;
+            color: rgb(20, 20, 20);
+            margin-bottom: 20px;
+        }
+        .hire>h2 {
+            font-family: "Inter", "Inter Placeholder", sans-serif;
+            font-size: 24px;
+            font-weight: 500;
+            letter-spacing: 0.3px;
+            color: rgb(136, 136, 136);
+        }
+        .get-started{
+            background-color: rgb(20, 20, 20);
+            width: 100px;
+            height: 40px;
+            border-radius: 7px;
+            display: flex;
+            justify-content: center;
+        }
+        .get-started>p {
+            color: white;
+            font-family: "Inter", "Inter Placeholder", sans-serif;
+            font-size: 14px;
+            font-weight: 700;
+            align-self: center;
+            letter-spacing: 0.50px;
+        }
+        .buttons {
+            display: flex;
+            gap: 20px;
+        }
+        .learn-more {
+            background-color: rgb(228, 226, 226);
+        }
+        .learn-more>p {
+            color: rgb(20, 20, 20);
+            letter-spacing: 0.50px;
+        }
+        .main-image{
+            background-color: grey;
+            height: 630px;
+            width: 940px;
+            margin-left: 260px;
+            margin-top: 27px;
+        }
+        .first-info {
+            display: flex;
+        }
+        .sndbox {
+            background-color: rgb(255, 255, 255);
+            width: 1650px;
+            height: 370px;
+            margin-top: 35px;
+            margin-left: 110px;
+            border-radius: 27px;
+            border: 1px solid black;
+            box-shadow: 10px 10px rgb(156, 156, 156);
+        }
+        .insndbox {
+            width: 1200px;
+            height: 300px;
+            margin-left: 200px;
+            margin-top: 90px;
+        }
+        .insndbox>h1 {
+            font-family: "Inter", "Inter Placeholder", sans-serif;
+            font-size: 50px;
+            font-weight: 700;
+            letter-spacing: -2.1px;
+            align-items: center;
+            margin-left: 500px;
+        }
+        .boxes {
+            width: 1100px;
+            height: 780px;
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: auto;
+            margin-top: 100px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .box {
+            width: 320px;
+            height: 350px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 20px;
+            box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0px 2px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+        .box-heading {
+            height: 85px;
+            width: 320px;
+            display: flex;
+        }
+        .box-heading>h3 {
+            font-family: "Inter", "Inter Placeholder", sans-serif;
+            letter-spacing: -0.7px;
+            line-height: 1.4em;
+            margin-left: 28px;
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: 600;      
+        }
+        .box-heading>img {
+            margin-top: 30px;
+            margin-left: 30px;
+        }
+        .details {
+            height: 200px;
+            width: 250px;
+            margin-left: 30px;
+        }
+        .details>p {
+            font-family: "Inter", "Inter Placeholder", sans-serif;
+            font-weight: 500;
+            line-height: 1.6em;
+            color: rgb(102, 102, 102);
+            align-items: left;
+        }
+        .reviews {
+            width: 500px;
+            height: 400px;
+            left:0;
+            right: 0;
+            margin: auto;
+            margin-top: 1080px;
+        }
+        .reviews>h1 {
+            font-family: "Inter", "Inter Placeholder", sans-serif;
+            font-size: 50px;
+            font-weight: 700;
+            letter-spacing: -2.1px;
+            text-align:center;
+        }
+        .reviews>h2 {
+            font-family: "Inter", "Inter Placeholder", sans-serif;
+            font-size: 24px;
+            font-weight: 500;
+            letter-spacing: -0.7px;
+            line-height: 1.5em;
+            text-align:center;
+            color: rgb(139, 138, 138);
+        }
+        .aboutperson {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            padding-left: 150px;
+            font-family: "Inter", "Inter Placeholder", sans-serif;;
+        }
+        .aboutperson>img {
+            margin-right: 10px;
+        }
+        .plans {
+            height: 370px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <div class="logoimg">
+                <img src="logo.svg" width="25px" height="25px">
+            </div>
+            <img src="logotext.svg" width="50px" height="50px">
+        </div>
+        <div class="info">
+            <a href="#">Product</a>
+            <a href="#">Resources</a>
+            <a href="#">Community</a>
+            <a href="#">Changelog</a>
+            <a href="#">Pricing</a>
+        </div>
+    </div>
+    <div class="first-info">
+        <div class="hire">
+            <h1>Hire Virtual CTO Today</h1>
+            <h2>Virtual CTO is an on-demand CTO service offering flexible, cost-effective solutions for any business size.</h2>
+            <div class="buttons">
+                <div class="get-started">
+                    <p>Get Started</p>
+                </div>
+                <div class="learn-more get-started">
+                    <p>Learn More</p>
+                </div>
+            </div>
+        </div>
+        <div class="main-image">
+        </div>
+    </div>
+    <div class="sndbox">
+        <div class="insndbox">
+            <h1>Trusted By</h1>
+        </div>
+    </div>
+    <div class="boxes">
+        <div class="box1 box">
+            <div class="box-heading">
+                <img src="logo.svg" height="40px" width="40px">
+                <h3>Support for Growing Organizations</h3>
+            </div>
+            <div class="details">
+                <p>Thank you for building such an empowering tool, especially for designers! The site went from Figma to Framer in less than a week!</p>
+            </div>
+        </div>
+        <div class="box2 box">
+            <div class="box-heading">
+                <img src="logo.svg" height="40px" width="40px">
+                <h3>Stay Ahead with Emerging Technology</h3>
+            </div>
+            <div class="details">
+                <p>Playing around with @framer while building a landing page for a side project. I’m terrible at animations, but they make it so easy!</p>
+            </div>
+        </div>
+        <div class="box3 box">
+            <div class="box-heading">
+                <img src="logo.svg" height="40px" width="40px">
+                <h3>Resolve Technological Issues</h3>
+            </div>
+            <div class="details">
+                <p>I’ve built pretty handy sites powered by Craft or WordPress in the past, but seeing @framer tackle CMS stuff so effortlessly is mind-boggling</p>
+            </div>
+        </div>
+        <div class="box4 box">
+            <div class="box-heading">
+                <img src="logo.svg" height="40px" width="40px">
+                <h3>Cost-Effective Expertise:</h3>
+            </div>
+            <div class="details">
+                <p>I’ve built pretty handy sites powered by Craft or WordPress in the past, but seeing @framer tackle CMS stuff so effortlessly is mind-boggling</p>
+            </div>
+        </div>
+        <div class="box5 box">
+            <div class="box-heading">
+                <img src="logo.svg" height="40px" width="40px">
+                <h3>Align Technology with Business Goals</h3>
+            </div>
+            <div class="details">
+                <p>I’ve built pretty handy sites powered by Craft or WordPress in the past, but seeing @framer tackle CMS stuff so effortlessly is mind-boggling</p>
+            </div>
+        </div>
+        <div class="box6 box">
+            <div class="box-heading">
+                <img src="logo.svg" height="40px" width="40px">
+                <h3>Consistent IT Management</h3>
+            </div>
+            <div class="details">
+                <p>I’ve built pretty handy sites powered by Craft or WordPress in the past, but seeing @framer tackle CMS stuff so effortlessly is mind-boggling</p>
+            </div>
+        </div>
+    </div>
+    <div class="reviews">
+        <h1>Reviews</h1>
+        <h2>“Thank you for building such an empowering tool, especially for designers! The site went from Figma to Framer in less than a week.”</h2>
+        <div class="aboutperson">
+            <img src="logo.svg" width="35px" height="35px">
+            <h2>Ishan Gupta</h2>
+        </div>
+    </div>
+    <div class="boxes plans">
+        <div class="box1 box">
+            <div class="box-heading">
+                <h3></h3>
+            </div>
+            <div class="details">
+                <p></p>
+            </div>
+        </div>
+        <div class="box1 box">
+            <div class="box-heading">
+                <h3></h3>
+            </div>
+            <div class="details">
+                <p></p>
+            </div>
+        </div>
+        <div class="box1 box">
+            <div class="box-heading">
+                <h3></h3>
+            </div>
+            <div class="details">
+                <p></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
